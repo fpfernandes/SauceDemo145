@@ -1,0 +1,23 @@
+1 Modos de execucao
+2 - Headless (padrao): sem exibicao
+---> nao tem interferencia do usuario 
+---> leve
+3 - Headed: com exibicao 
+---> npx playwright test --headed
+
+Melhores localizadores (2025):
+- data-test (W3C)
+- id
+- name
+- cssSelector
+- class ou tag
+- xPath
+
+3 fatores comuns de erro em automacao:
+- Seletor ruim
+-Falta de sincronismo
+- "Programacao exotica"
+
+Credenciais do GitHub para o Git
+git config --global user.name "fpfernandes"
+git config --global user.email "fabianapresoto@gmail.com"
