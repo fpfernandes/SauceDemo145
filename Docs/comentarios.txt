@@ -1,3 +1,36 @@
+Configuracoes JavaScript
+
+Terminal > new terminal
+
+Mudar para Git BAsh
+
+Digitar no terminal: npm init -y
+
+
+se digitar node -v mostra a versao do node
+
+para instalar playwright digitar npm install -D @playwright/test
+
+versao playwright digitar npx playwright --version
+
+para inicializar o playwright digitar:  
+
+	npm install --save-dev playwright
+
+	npx playwright install
+
+
+executar o teste digitar npx playwright test
+
+executar abrindo janela digitar npx playwright test --headed
+
+digitar npx playwright codegen https://www.saucedemo.com  para gravar tela com playwright
+ 
+digitar npx playwright test comprar_mochila.spec.js para rodar um teste so
+
+
+-------------------------------------------------------------
+
 Modos de execução
 - Headless (padrão): sem exibição
 --> Não tem interferência do usuário
@@ -58,30 +91,3 @@ Sortear ações? Pode ser uma alternativa a fazer só 1
 const usarClique = Math.random() < 0.7; // 70% das vezes clique e 30% Tab
 
 Arquivo de configuração do Playwright: playwright.config.js
-
-Credenciais do GitHub para o Git
-git config --global user.name "fpfernandes"
-git config --global user.email "fabianapresoto@gmail.com"
-
-Decisao de imitar a nevegacao do usuario ou otimizar velocidade
-
-// imitou o usuario
-await page.locator('[data-test="username"]').click();
-await page.locator('[data-test="username"]').fill('standard_user');
-
-// otimizou a execucao
-await page.locator('[data-test="username"]').fill('standard_user');
-
-E quando tem mais de um jeito de interagir
-- clicar ou dar tab (login do Saucedemo)
-- clicar na lupa ou dar Enter (Google)
-
-Comandos para teclado:
-<Tab>: await page.press('[data-test="username"]', 'Tab')
-<Enter>: await page.locator('[name="q"]', 'Enter') 
-
-Sortear acoes? Pode ser uma alternativa a fazer só 1
-const usarClique = Math.random() < 0.7; // 70% das vezes clique e 30% Tab
-
-
-Arquivo de configuracao do Playwright: playwright.config.js
