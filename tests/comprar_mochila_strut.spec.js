@@ -1,31 +1,20 @@
 import { test, expect } from '../utils/logger.js'
 import { snap } from '../utils/snap.js'
  
-test.describe('SauceDemo - fluxo principal de compra', () => {
+test.describe('SauceDemo - fluxo principal de compra', () => {  // suite de teste
     test('Login, Adicionar Mochila no Carrinho e Verificações',
         async({ page }, testInfo) => {
         testInfo.setTimeout(testInfo.timeout + 15000)
        
-        // Inicio do passo 1
+        // Inicio do Passo 1
         await test.step('Acessar SauceDemo.com', async () => {
             await page.goto('/')
  
             await expect(page).toHaveURL('/') // Verificação clássica
- 
-            await page.waitForLoadState('load') // espera a página carregar por completo
+            await expect(page.locator('[data-test="login-button"]')).toHaveText('Login')
            
-            await page.waitForResponse(response =>
-                response.url() === '/' && response.status() === 200
-                && response.request().method() === 'GET'
-            )
+            await snap(page, testInfo, 'TC001-Passo01-Home')
  
-            // await page.getByText('trigger response').click();
-            // const response = await responsePromise;
-            // )
- 
-            // verificar o botão Login - também é clássica
-            await expect(page.locator('[data-test="username"]')).toHaveText('Login')
-            await snap(page, testInfo, 'TC001-Passo01-Home' )
            
         }) // fim do passo 1
  
