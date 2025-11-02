@@ -65,6 +65,7 @@ Abordagens de automação
 - Capture and Playback / Record and Play --> Selenium IDE / Playwright Codegen
 - Script Simples - tudo junto em um só arquivo
 - Script Estruturado --> organiza o que se usa em 2 ou + locais em um 3º local 
+- BDD / Gherkin --> divide o script principal em 2: feature e steps
 
 Credencias do GitHub para o Git
 git config --global user.name "Iterasys"
@@ -91,3 +92,11 @@ Sortear ações? Pode ser uma alternativa a fazer só 1
 const usarClique = Math.random() < 0.7; // 70% das vezes clique e 30% Tab
 
 Arquivo de configuração do Playwright: playwright.config.js
+
+Instalacao de dependencias (comandos bash - rimraf (package json)):
+rm -rf node_modules package-lock.json
+rm -f package-lock.json
+npm cache clean --force
+npm install
+
+rimraf is an executable that is used to clean the installed node packages in a node based project. It basically executes the rm -rf command on the node_modules
